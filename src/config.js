@@ -104,7 +104,7 @@ defaults.RDBMS = {
   ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
 
   // DB host
-  DB_HOST: 'localhost',
+  DB_HOST: process.env.DB_HOST || 'localhost',
 
   // MySQL port
   DB_PORT: '3306',
