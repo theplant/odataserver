@@ -748,10 +748,11 @@ exports.ODataServer.prototype.main = function(request, response, next) {
       var mysqlAdmin;
       var accountId = request.headers.user;
       var password = request.headers.password;
+      var database = request.headers.database || accountId;
 
       var options = {
         credentials: {
-          database: accountId,
+          database: database,
           user: accountId,
           password: password
         },
